@@ -1,0 +1,15 @@
+interface:
+  display_name: Run ASVS Compliance
+  short_description: Review web app and API controls with traceable evidence
+  default_prompt: Check my current changes for security risks with ASVS 5.0.0. If
+    there are no changes, review the open API for likely risks. Start without setup
+    questions.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
