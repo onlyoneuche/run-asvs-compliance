@@ -4,11 +4,40 @@ A portable skill for coding agents to review web applications and APIs against O
 
 It uses the CSV from OWASP's [fixed ASVS 5.0.0 release](https://github.com/OWASP/ASVS/releases/tag/v5.0.0_release) by default. Teams can provide another checklist or select specific controls. The official checklist is retrieved for each review; it is not bundled here.
 
-## Use
 
-Place this folder at `~/.agents/skills/run-asvs-compliance` for Codex or `~/.claude/skills/run-asvs-compliance` for Claude Code. Open the application repository. In Codex, type `$run-asvs-compliance`; in Claude Code, type `/run-asvs-compliance`. It reviews current changes and follows affected security paths. If there are no identifiable changes, it runs a focused baseline review. The application repository needs no skill-specific changes.
+They were together because one `npx skills add` command can install the skill for both agents. Separate commands are clearer when someone uses only one.
 
-> $run-asvs-compliance
+## Installation
+
+Install Run-ASVS-Compliance globally so it is available in any project without adding files to your application repository.
+
+### Codex
+
+```bash
+npx skills add onlyoneuche/run-asvs-compliance -g -a codex
+```
+
+Open your project in Codex and run:
+
+```text
+$run-asvs-compliance
+```
+
+### Claude Code
+
+```bash
+npx skills add onlyoneuche/run-asvs-compliance -g -a claude-code
+```
+
+Open your project in Claude Code and run:
+
+```text
+/run-asvs-compliance
+```
+
+## Use Source
+
+Place the repository folder at `~/.agents/skills/run-asvs-compliance` for Codex or `~/.claude/skills/run-asvs-compliance` for Claude Code. Open the application repository. In Codex, type `$run-asvs-compliance`; in Claude Code, type `/run-asvs-compliance`. It reviews current changes and follows affected security paths. If there are no identifiable changes, it runs a focused baseline review. The application repository needs no skill-specific changes.
 
 ## Review scope
 
